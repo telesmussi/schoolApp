@@ -1,0 +1,15 @@
+<%= semantic_form_for(@student, :html => {:class => 'form-horizontal'}) do |f| %>
+
+<%= f.inputs do %>
+<%= f.input :name, :label => "Nome", :input_html => { :readonly => !is_admin? } %>
+<%= f.input :birth, :label => "Data de Nascimento", :input_html => { :readonly => !is_admin? } %>
+<%= f.input :mother, :label => "Nome da Mãe", :input_html => { :readonly => !is_admin? } %>
+<%= f.input :processnro, :label => "Número do Processo", :input_html => { :readonly => !is_admin? } %>
+<%= f.input :briefcase, :label => "Local da Pasta", :input_html => { :readonly => !is_admin? } %>
+<% end %>
+
+<%= f.actions do %>
+<%= f.action :submit, :label => "Salvar" %>
+<% end %>
+
+<% end %>

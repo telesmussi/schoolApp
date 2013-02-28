@@ -1,0 +1,18 @@
+== About
+
+	Colégio Polivalente - Itumbiara/GO
+	
+== Usage
+
+  $ git clone git://github.com/telesmussi/schoolApp.git
+  $ cd school 
+  $ bundle install # to make sure you have the Paperclip gem and correct version of Rails
+  $ rake db:migrate
+  $ rails server
+
+And go to http://localhost:3000/
+
+Developers:
+  - Ramon Teles Mussi Filho
+
+Copyright © 2013 PDM Sistemas.

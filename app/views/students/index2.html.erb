@@ -1,0 +1,30 @@
+<h2>Alunos Encontrados</h2>
+
+<table class="table">
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Data de Nascimento</th>
+    <th>Mãe</th>
+    <th>Número Processo</th>
+    <th>Local da Pasta</th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<% @students.each do |student|  %>
+  <tr>
+    <td><%= link_to student.name, student %></td>
+    <td><%= student.birth  %></td>
+    <td><%= student.mother %></td>
+    <td><%= student.processnro %></td>
+    <td><%= student.briefcase %></td>
+    <td><%= link_to alterar, edit_student_path(student), :class => "btn btn-small" %></td>
+    <td>
+      <% if is_admin? %>
+        <td>  <%= link_to excluir, student, confirm: 'Tem certeza?', method: :delete, :class => "btn btn-small" %> </td>
+      <%end%>
+    </td>
+  </tr>
+<% end %>
+</table>

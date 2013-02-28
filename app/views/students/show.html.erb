@@ -1,0 +1,13 @@
+<h2>Aluno <small>(<%= @student.name %>)</small></h2>
+
+<%= hash_table "span6", "Nome" => @student.name, 
+        "Data de Nascimento" => @student.birth,  
+        "Nome da Mãe" => @student.mother,  
+        "Número do Processo" => @student.processnro,  
+        "Local da Pasta" => @student.briefcase
+        %>
+
+<% if is_admin? %> <%= link_to voltar, new_student_path %> | <%end%>
+           <%= link_to alterar, edit_student_path(@student) %>
+
+
