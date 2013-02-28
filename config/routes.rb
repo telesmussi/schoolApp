@@ -11,7 +11,7 @@ School::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  match '/EscolaPolivalente', to: 'students#index'
+  match '/ColegioPolivalente', to: 'students#index'
 
   match 'students/findbyname', to: 'students#index2', via: :post
 

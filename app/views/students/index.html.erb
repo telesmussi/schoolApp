@@ -1,17 +1,22 @@
 <h2>Pesquisar Aluno</h2>
 
 <%= form_tag "/students/findbyname" do %>
+<div class="row">
+  <div class="span4">
   <%= label_tag "Aluno:" %>
   <%= text_field_tag "student_name"  %>
   <%= label_tag "Mãe:" %>
   <%= text_field_tag "student_mother"  %>
+  <%= label_tag "Data de Nascimento:" %>
+  <%= text_field_tag "student_birth"  %>
+  </div>
+  <div class="span4 offset1">
   <%= label_tag "Número Processo:" %>
   <%= text_field_tag "student_processnro"  %>
   <%= label_tag "Local da Pasta:" %>
   <%= text_field_tag "student_briefcase"  %>
-  <%= label_tag "Data de Nascimento:" %>
-  <%= text_field_tag "student_birth"  %>
-</br>
+  </div>
+</div>
 </br>
   <%= submit_tag "Pesquisar", :class => "btn", :id => :find_name_button %>
 <% end %>

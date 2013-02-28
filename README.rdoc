@@ -10,7 +10,7 @@
   $ rake db:migrate
   $ rails server
 
-And go to http://localhost:3000/
+And go to http://localhost:3000/ColegioPolivalente
 
 Developers:
   - Ramon Teles Mussi Filho
